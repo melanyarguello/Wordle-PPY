@@ -34,7 +34,7 @@ function enter(){
             letra.style.backgroundColor = "green"
         } else if (palabraSecreta.includes(intento[i])){
             console.log(intento[i], "amarillo")
-            letra.style.backgroundColor = "yelow"
+            letra.style.backgroundColor = "yellow"
         }else {
             console.log (intento[i], "gris")
             letra.style.backgroundColor = "gray"
@@ -44,16 +44,15 @@ function enter(){
 grid.appendChild(row)
 
     oportunidades -- 
-    if (oportunidades == 0)
+    if (oportunidades === 0)
         GameOver("Ups Perdiste!")
 }
 
 function GameOver(mensaje){
     const input = document.getElementById("guess-input");
-    const button = document.getElementById("guess-button");   
-button.disablet = true
-input.disablet = true
-let contenedor = document.getElementById("guesses");
+    const button = document.getElementById("guess-button");
+button.disabed = true;
+input.disabled = true;
+let contenedor = document.getElementById('guesses');
 contenedor.innerHTML = "<h1>" + mensaje + "</h1>"
 }
-
